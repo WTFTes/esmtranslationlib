@@ -1,0 +1,10 @@
+[submodule "external/osg"]
+	path = external/osg
+	url = https://github.com/OpenMW/osg.git
+[submodule "external/json"]
+	path = external/json
+	url = https://github.com/nlohmann/json.git
+[submodule "external/openmw"]
+	path = external/openmw
+	url = https://github.com/WTFTes/openmw.git
+	branch = improvement/for-translationlib
