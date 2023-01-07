@@ -1,11 +1,11 @@
-#ifndef ESMTRANSLATIONLIB_TEXTS_H
-#define ESMTRANSLATIONLIB_TEXTS_H
+#ifndef MWTEXTLIB_TEXTS_H
+#define MWTEXTLIB_TEXTS_H
 
 #include "textinfo.hpp"
 #include <apps/esmtool/record.hpp>
 #include <components/esm/records.hpp>
 
-namespace EsmTranslationLib
+namespace mwtextlib
 {
     template <class T>
     std::string getUniqId(T &record);
@@ -14,4 +14,4 @@ namespace EsmTranslationLib
     CollectedTexts collectTexts(T &record);
 }
 
-#endif //ESMTRANSLATIONLIB_TEXTS_H
+#endif //MWTEXTLIB_TEXTS_H

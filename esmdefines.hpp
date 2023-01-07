@@ -1,12 +1,12 @@
-#ifndef ESMTRANSLATIONLIB_ESMDEFINES_H
-#define ESMTRANSLATIONLIB_ESMDEFINES_H
+#ifndef MWTEXTLIB_ESMDEFINES_H
+#define MWTEXTLIB_ESMDEFINES_H
 
-#if defined(ESMTRANSLATIONLIB_EXPORT)
-# define ESMTRANSLATIONLIB_API extern "C" __declspec(dllexport)
-# define ESMTRANSLATIONLIB_API_CLASS __declspec(dllexport)
+#if defined(MWTEXTLIB_EXPORT)
+# define MWTEXTLIB_API extern "C" __declspec(dllexport)
+# define MWTEXTLIB_API_CLASS __declspec(dllexport)
 #else
-# define ESMTRANSLATIONLIB_API
-# define ESMTRANSLATIONLIB_API_CLASS
+# define MWTEXTLIB_API
+# define MWTEXTLIB_API_CLASS
 #endif
 
-#endif //ESMTRANSLATIONLIB_ESMDEFINES_H
+#endif //MWTEXTLIB_ESMDEFINES_H

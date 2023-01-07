@@ -1,10 +1,10 @@
-#ifndef ESMTRANSLATIONLIB_ARGUMENTS_H
-#define ESMTRANSLATIONLIB_ARGUMENTS_H
+#ifndef MWTEXTLIB_ARGUMENTS_H
+#define MWTEXTLIB_ARGUMENTS_H
 
 #include <filesystem>
 #include <components/esm/format.hpp>
 
-namespace EsmTranslationLib
+namespace mwtextlib
 {
     struct Arguments
     {
@@ -24,4 +24,4 @@ namespace EsmTranslationLib
     };
 }
 
-#endif //ESMTRANSLATIONLIB_ARGUMENTS_H
+#endif //MWTEXTLIB_ARGUMENTS_H

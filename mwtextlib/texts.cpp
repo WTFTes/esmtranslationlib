@@ -3,7 +3,7 @@
 #include <nlohmann/json.hpp>
 #include <components/misc/strings/format.hpp>
 
-namespace EsmTranslationLib
+namespace mwtextlib
 {
     template <>
     std::string getUniqId(ESM::Cell &record)

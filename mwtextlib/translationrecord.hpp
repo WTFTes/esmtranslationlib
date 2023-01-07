@@ -1,5 +1,5 @@
-#ifndef ESMTRANSLATIONLIB_TRANSLATIONRECORD_H
-#define ESMTRANSLATIONLIB_TRANSLATIONRECORD_H
+#ifndef MWTEXTLIB_TRANSLATIONRECORD_H
+#define MWTEXTLIB_TRANSLATIONRECORD_H
 
 #include <string>
 #include <esmdefines.hpp>
@@ -7,7 +7,7 @@
 #include <iostream>
 #include "textinfo.hpp"
 
-namespace EsmTranslationLib
+namespace mwtextlib
 {
     enum TextType
     {
@@ -20,7 +20,7 @@ namespace EsmTranslationLib
 
     struct TranslationRecord
     {
-        TranslationRecord(int index, EsmTranslationLib::TextInfo &info, std::string const &contextName,
+        TranslationRecord(int index, mwtextlib::TextInfo &info, std::string const &contextName,
                           std::string const &contextId):
                 holder(info.holder)
         {
@@ -53,12 +53,12 @@ namespace EsmTranslationLib
     };
 }
 
-ESMTRANSLATIONLIB_API const char *__cdecl TranslationRecord_GetSource(EsmTranslationLib::TranslationRecord *);
-ESMTRANSLATIONLIB_API const char *__cdecl TranslationRecord_GetTarget(EsmTranslationLib::TranslationRecord *);
-ESMTRANSLATIONLIB_API const char *__cdecl TranslationRecord_GetContextName(EsmTranslationLib::TranslationRecord *);
-ESMTRANSLATIONLIB_API const char *__cdecl TranslationRecord_GetContextId(EsmTranslationLib::TranslationRecord *);
-ESMTRANSLATIONLIB_API const char *__cdecl TranslationRecord_GetMeta(EsmTranslationLib::TranslationRecord *);
+MWTEXTLIB_API const char *__cdecl TranslationRecord_GetSource(mwtextlib::TranslationRecord *);
+MWTEXTLIB_API const char *__cdecl TranslationRecord_GetTarget(mwtextlib::TranslationRecord *);
+MWTEXTLIB_API const char *__cdecl TranslationRecord_GetContextName(mwtextlib::TranslationRecord *);
+MWTEXTLIB_API const char *__cdecl TranslationRecord_GetContextId(mwtextlib::TranslationRecord *);
+MWTEXTLIB_API const char *__cdecl TranslationRecord_GetMeta(mwtextlib::TranslationRecord *);
 
-ESMTRANSLATIONLIB_API const char *__cdecl TranslationRecord_SetTarget(EsmTranslationLib::TranslationRecord *, const char *);
+MWTEXTLIB_API const char *__cdecl TranslationRecord_SetTarget(mwtextlib::TranslationRecord *, const char *);
 
-#endif //ESMTRANSLATIONLIB_TRANSLATIONRECORD_H
+#endif //MWTEXTLIB_TRANSLATIONRECORD_H

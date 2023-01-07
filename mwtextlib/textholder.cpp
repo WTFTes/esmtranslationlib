@@ -2,7 +2,7 @@
 #include "components/esm/refid.hpp"
 #include <components/esm3/variant.hpp>
 
-using namespace EsmTranslationLib;
+using namespace mwtextlib;
 
 template <>
 void TextHolder<std::string>::set(std::string const &value)

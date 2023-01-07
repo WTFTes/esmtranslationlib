@@ -3,13 +3,13 @@
 #include "writer.hpp"
 #include <fstream>
 
-using namespace EsmTranslationLib;
+using namespace mwtextlib;
 
 TranslationState *Translation_GetTexts(const wchar_t *fileName, const char *encoding)
 {
     TranslationState::clearLastError();
 
-#ifdef ESMTRANSLATIONLIB_EXPORT
+#ifdef MWTEXTLIB_EXPORT
     Log::SetBuffer(std::make_shared<std::fstream>("debug.log", std::fstream::out | std::fstream::app));
 #endif
 

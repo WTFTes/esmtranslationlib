@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-project(esmtranslationlib LANGUAGES CXX)
+project(mwtextlib LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX20_STANDARD_COMPILE_OPTION "-std:c++latest")
@@ -81,30 +81,30 @@ set (library_files
         external/openmw/apps/esmtool/labels.cpp
         external/openmw/apps/esmtool/record.cpp
 
-        esmtranslationlib/generator.cpp
-        esmtranslationlib/loader.cpp
-        esmtranslationlib/textholder.cpp
-        esmtranslationlib/texts.cpp
-        esmtranslationlib/translationstate.cpp
-        esmtranslationlib/translationrecord.cpp
-        esmtranslationlib/writer.cpp
+        mwtextlib/generator.cpp
+        mwtextlib/loader.cpp
+        mwtextlib/textholder.cpp
+        mwtextlib/texts.cpp
+        mwtextlib/translationstate.cpp
+        mwtextlib/translationrecord.cpp
+        mwtextlib/writer.cpp
 )
 
-add_library(esmtranslationlib_static STATIC
+add_library(mwtextlib_static STATIC
         ${library_files}
 )
 
-add_library(esmtranslationlib SHARED
+add_library(mwtextlib SHARED
         ${library_files}
 )
 
-target_compile_options(esmtranslationlib PUBLIC)
+target_compile_options(mwtextlib PUBLIC)
 
-target_compile_definitions(esmtranslationlib PUBLIC ESMTRANSLATIONLIB_EXPORT OSG_EXPORT_ OSG_EXPORT=)
-target_compile_definitions(esmtranslationlib_static PUBLIC OSG_EXPORT_ OSG_EXPORT=)
+target_compile_definitions(mwtextlib PUBLIC MWTEXTLIB_EXPORT OSG_EXPORT_ OSG_EXPORT=)
+target_compile_definitions(mwtextlib_static PUBLIC OSG_EXPORT_ OSG_EXPORT=)
 
-#add_executable(test
-#        main.cpp
-#        ${library_files}
-#)
-#target_compile_definitions(test PUBLIC OSG_EXPORT_ OSG_EXPORT=)
+add_executable(test
+        main.cpp
+        ${library_files}
+)
+target_compile_definitions(test PUBLIC OSG_EXPORT_ OSG_EXPORT=)

@@ -2,7 +2,7 @@
 #include "texts.hpp"
 #include <nlohmann/json.hpp>
 
-using namespace EsmTranslationLib;
+using namespace mwtextlib;
 
 std::string TranslationState::lastError;
 

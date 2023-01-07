@@ -9,7 +9,7 @@
 #include <fstream>
 #include <unordered_set>
 
-namespace EsmTranslationLib
+namespace mwtextlib
 {
     void printRawTes3(const std::filesystem::path &path)
     {

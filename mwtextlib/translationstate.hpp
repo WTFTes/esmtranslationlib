@@ -1,5 +1,5 @@
-#ifndef ESMTRANSLATIONLIB_TRANSLATIONSTATE_H
-#define ESMTRANSLATIONLIB_TRANSLATIONSTATE_H
+#ifndef MWTEXTLIB_TRANSLATIONSTATE_H
+#define MWTEXTLIB_TRANSLATIONSTATE_H
 
 #include <vector>
 #include <memory>
@@ -8,7 +8,7 @@
 #include <components/debug/debuglog.hpp>
 #include "esmdata.hpp"
 
-namespace EsmTranslationLib
+namespace mwtextlib
 {
     struct TranslationRecordInfo
     {
@@ -130,9 +130,9 @@ namespace EsmTranslationLib
     };
 }
 
-ESMTRANSLATIONLIB_API EsmTranslationLib::TranslationRecordInfo
-__cdecl TranslationState_GetNextRecordInfo(EsmTranslationLib::TranslationState *state);
-ESMTRANSLATIONLIB_API void __cdecl TranslationState_Reset(EsmTranslationLib::TranslationState *state);
-ESMTRANSLATIONLIB_API void __cdecl TranslationState_Dispose(EsmTranslationLib::TranslationState *state);
+MWTEXTLIB_API mwtextlib::TranslationRecordInfo
+__cdecl TranslationState_GetNextRecordInfo(mwtextlib::TranslationState *state);
+MWTEXTLIB_API void __cdecl TranslationState_Reset(mwtextlib::TranslationState *state);
+MWTEXTLIB_API void __cdecl TranslationState_Dispose(mwtextlib::TranslationState *state);
 
-#endif //ESMTRANSLATIONLIB_TRANSLATIONSTATE_H
+#endif //MWTEXTLIB_TRANSLATIONSTATE_H

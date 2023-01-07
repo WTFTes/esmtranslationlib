@@ -8,7 +8,7 @@
 #include <fstream>
 #include <unordered_set>
 
-int EsmTranslationLib::write(const EsmTranslationLib::Arguments &info, ESMData &data, bool throwOnErrors)
+int mwtextlib::write(const mwtextlib::Arguments &info, ESMData &data, bool throwOnErrors)
 {
     if (info.outname.empty())
     {

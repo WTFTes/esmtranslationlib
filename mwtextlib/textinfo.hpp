@@ -1,12 +1,12 @@
-#ifndef ESMTRANSLATIONLIB_TEXTINFO_H
-#define ESMTRANSLATIONLIB_TEXTINFO_H
+#ifndef MWTEXTLIB_TEXTINFO_H
+#define MWTEXTLIB_TEXTINFO_H
 
 #include <list>
 #include <string>
 #include "textholder.hpp"
 #include <memory>
 
-namespace EsmTranslationLib
+namespace mwtextlib
 {
     class TextInfo
     {
@@ -27,4 +27,4 @@ namespace EsmTranslationLib
     typedef std::list<TextInfo> CollectedTexts;
 }
 
-#endif //ESMTRANSLATIONLIB_TEXTINFO_H
+#endif //MWTEXTLIB_TEXTINFO_H

@@ -1,7 +1,7 @@
 #include "translationrecord.hpp"
 #include "translationstate.hpp"
 
-using namespace EsmTranslationLib;
+using namespace mwtextlib;
 
 const char *TranslationRecord_GetSource(TranslationRecord *record)
 {

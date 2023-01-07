@@ -1,11 +1,11 @@
-#ifndef ESMTRANSLATIONLIB_ESMDATA_H
-#define ESMTRANSLATIONLIB_ESMDATA_H
+#ifndef MWTEXTLIB_ESMDATA_H
+#define MWTEXTLIB_ESMDATA_H
 
 #include <components/esm3/loadtes3.hpp>
 #include <apps/esmtool/record.hpp>
 #include <deque>
 
-namespace EsmTranslationLib
+namespace mwtextlib
 {
     struct ESMData
     {
@@ -17,4 +17,4 @@ namespace EsmTranslationLib
     };
 }
 
-#endif //ESMTRANSLATIONLIB_ESMDATA_H
+#endif //MWTEXTLIB_ESMDATA_H

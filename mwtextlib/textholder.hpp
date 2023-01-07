@@ -1,9 +1,9 @@
-#ifndef ESMTRANSLATIONLIB_TEXTHOLDER_H
-#define ESMTRANSLATIONLIB_TEXTHOLDER_H
+#ifndef MWTEXTLIB_TEXTHOLDER_H
+#define MWTEXTLIB_TEXTHOLDER_H
 
 #include <string>
 
-namespace EsmTranslationLib
+namespace mwtextlib
 {
     class TextHolderBase
     {
@@ -33,4 +33,4 @@ namespace EsmTranslationLib
     };
 }
 
-#endif //ESMTRANSLATIONLIB_TEXTHOLDER_H
+#endif //MWTEXTLIB_TEXTHOLDER_H
