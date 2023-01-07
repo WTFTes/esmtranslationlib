@@ -19,7 +19,7 @@ namespace EsmTranslationLib
     template <>
     std::string getUniqId(ESM::DialInfo &record)
     {
-        return Misc::StringUtils::format("%s_%s_%s_%s", record.mDialogue->mId.getRefIdString(),
+        return Misc::StringUtils::format("%s_%s_%s",
                                          record.mId.getRefIdString(),
                                          record.mPrev.empty() ? "EMPTY" : record.mPrev.getRefIdString(),
                                          record.mNext.empty() ? "EMPTY" : record.mNext.getRefIdString());
