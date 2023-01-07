@@ -28,6 +28,7 @@ namespace EsmTranslationLib
             this->translationType = info.textType;
             this->source = info.holder.get()->get();
             this->target = info.holder.get()->get();
+            this->maxLength = info.maxLength;
             this->contextName = contextName;
             this->contextId = contextId;
             this->meta = info.metaJson;
@@ -39,13 +40,14 @@ namespace EsmTranslationLib
                 holder->set(target);
         }
 
-        int translationIndex;
-        int translationType;
         std::string source;
         std::string target;
         std::string contextName;
         std::string contextId;
         std::string meta;
+        int translationIndex;
+        int translationType;
+        int maxLength;
         TranslationState *state;
         std::shared_ptr<TextHolderBase> holder;
     };

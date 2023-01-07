@@ -12,8 +12,8 @@ namespace EsmTranslationLib
     {
     public:
         template <class T>
-        TextInfo(int textType, std::reference_wrapper<T> value, std::string const &metaJson = "") :
-                textType(textType), metaJson(metaJson)
+        TextInfo(int textType, std::reference_wrapper<T> value, int maxLength = 0, std::string const &metaJson = "") :
+                textType(textType), maxLength(maxLength), metaJson(metaJson)
         {
             holder = std::make_shared<TextHolder<T>>(value);
         }
@@ -21,6 +21,7 @@ namespace EsmTranslationLib
         int textType;
         std::shared_ptr<TextHolderBase> holder;
         std::string metaJson;
+        int maxLength;
     };
 
     typedef std::list<TextInfo> CollectedTexts;

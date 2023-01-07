@@ -26,6 +26,18 @@ namespace EsmTranslationLib
     }
 
     template <>
+    std::string getUniqId(ESM::Skill &record)
+    {
+        return record.mId.getRefIdString();
+    }
+
+    template <>
+    std::string getUniqId(ESM::MagicEffect &record)
+    {
+        return record.mId.getRefIdString();
+    }
+
+    template <>
     std::string getUniqId(EsmTool::RecordBase &record)
     {
         switch (record.getType().toInt())
@@ -34,6 +46,10 @@ namespace EsmTranslationLib
                 return getUniqId(record.cast<ESM::Cell>()->get());
             case ESM::REC_INFO:
                 return getUniqId(record.cast<ESM::DialInfo>()->get());
+            case ESM::REC_SKIL:
+                return getUniqId(record.cast<ESM::Skill>()->get());
+            case ESM::REC_MGEF:
+                return getUniqId(record.cast<ESM::MagicEffect>()->get());
             default:
                 break;
         }
@@ -159,8 +175,8 @@ namespace EsmTranslationLib
     CollectedTexts collectTexts(ESM::Faction &record)
     {
         CollectedTexts texts = {{ TextType_Text, std::ref(record.mName) }};
-        for (int i = 0; i < 10; ++i)
-            texts.emplace_back(TextType_Text, std::ref(record.mRanks[i]));
+        for (auto& mRank : record.mRanks)
+            texts.emplace_back(TextType_Text, std::ref(mRank), 32);
 
         return texts;
     }
@@ -193,8 +209,8 @@ namespace EsmTranslationLib
 
         auto meta = metaJson.dump();
         return {
-                { TextType_Text,   std::ref(record.mResponse),     meta },
-                { TextType_Script, std::ref(record.mResultScript), meta },
+                { TextType_Text,   std::ref(record.mResponse),     0, meta },
+                { TextType_Script, std::ref(record.mResultScript), 0, meta },
         };
     }
 
@@ -270,7 +286,7 @@ namespace EsmTranslationLib
         nlohmann::json json = {
                 { "race", record.mRace.getRefIdString() }
         };
-        return {{ TextType_Text, std::ref(record.mName), json.dump() }};
+        return {{ TextType_Text, std::ref(record.mName), 0, json.dump() }};
     }
 
     template <>

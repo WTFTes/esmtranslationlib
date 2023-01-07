@@ -13,16 +13,17 @@ namespace EsmTranslationLib
     struct TranslationRecordInfo
     {
         TranslationRecord *pointer = nullptr;
-        int index = -1;
-        int type = 0;
         char const *source = nullptr;
         char const *target = nullptr;
         char const *contextName = nullptr;
         char const *contextId = nullptr;
         char const *meta = nullptr;
+        int index = -1;
+        int type = 0;
+        int maxLength = 0;
     };
 
-    static_assert(sizeof(TranslationRecordInfo) == 56, "asd");
+    static_assert(sizeof(TranslationRecordInfo) == 64, "asd");
 
     class TranslationState
     {
@@ -74,13 +75,14 @@ namespace EsmTranslationLib
 
                 return {
                         record.get(),
-                        record->translationIndex,
-                        record->translationType,
                         record->source.c_str(),
                         record->target.c_str(),
                         record->contextName.c_str(),
                         record->contextId.c_str(),
                         record->meta.c_str(),
+                        record->translationIndex,
+                        record->translationType,
+                        record->maxLength
                 };
             }
 
